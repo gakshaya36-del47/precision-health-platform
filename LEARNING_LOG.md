@@ -18,28 +18,41 @@ analysis without duplicating logic.
 Python dataclasses and basic `typing` (Optional, Literal) — needed for
 Phase 2's `UserProfile`/`LifestyleProfile` structures.
 
-## 22 July 2026 — Day 1
+## Day 2 — Evidence Verification and Version 1 Scope Freeze
 
-### Technical milestone
+### Objective
+Establish a scientifically defensible evidence foundation before implementing any health assessment or prediction functionality.
 
-Successfully installed the Python dependencies and launched the Streamlit prototype locally.
+### Work completed
+- Reviewed candidate validated screening instruments and health assessment frameworks.
+- Distinguished validated screening instruments from classification/assessment tools, evidence mapping, and exploratory research hypotheses.
+- Identified FINDRISC as the candidate validated screening instrument for type 2 diabetes risk screening, pending final primary-source verification before implementation.
+- Identified PHQ-9 as the candidate validated screening instrument for depression-related symptoms, with a mandatory safety-response pathway for Item 9 before implementation.
+- Restricted obesity and metabolic health to transparent classification and assessment measures such as BMI and appropriately verified anthropometric measures.
+- Restricted cardiovascular functionality in Version 1 to evidence mapping rather than an unsupported numerical percentage risk prediction.
+- Restricted shared-factor relationships to citation-linked evidence mapping rather than an arbitrary composite score.
+- Excluded genetic risk scoring from Version 1.
+- Created a Version 1 Evidence Freeze defining which features are approved for implementation and which are explicitly excluded.
 
-### What I learned
+### Scientific principles established
+1. A screening instrument is not a diagnosis.
+2. An association is not automatically causation.
+3. A numerical score should not be created without a scientifically justified and documented model.
+4. A validated model should not be assumed to transfer perfectly across populations.
+5. Evidence strength and population applicability must be documented.
+6. Safety requirements must be designed before implementing mental-health screening functionality.
 
-- The project uses Python and Streamlit.
-- The application can be launched using:
-  `python3 -m streamlit run app/main.py`
-- The current project is a scaffold rather than a completed health prediction system.
-- The existing application currently contains no biomedical calculation logic.
+### Current Version 1 direction
+The platform will combine:
+- transparent anthropometric assessment,
+- a verified diabetes screening instrument,
+- a validated mental-health screening instrument with an appropriate safety pathway,
+- citation-linked cross-domain evidence mapping,
+- cardiovascular factor evidence mapping,
+- explainable outputs with limitations.
 
-### Scientific understanding
+### Day 2 outcome
+The Version 1 scientific scope has been frozen before application implementation begins.
 
-The planned platform will explore interconnected health domains rather than treating each condition in isolation. Obesity, depression-related mental well-being, type 2 diabetes, and cardiovascular risk share several potentially important factors, including lifestyle, anthropometrics, clinical biomarkers, family history, and genetic susceptibility.
-
-### Current limitation
-
-The platform currently represents a software scaffold and does not yet produce clinical risk estimates or diagnostic outputs.
-
-### Next learning goal
-
-Understand how to design a transparent shared data model and evidence structure for a multi-domain biomedical research prototype.
+### Next milestone
+Day 3: design the structured data model and validation architecture for the approved Version 1 features.
