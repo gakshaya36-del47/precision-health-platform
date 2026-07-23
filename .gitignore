@@ -21,3 +21,5 @@ data/private/
 # Editor
 .vscode/
 .idea/
+files/
+*.zip
