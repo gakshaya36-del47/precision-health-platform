@@ -128,4 +128,31 @@ Design and implement the scientific data model and evidence structure before bui
 
 ## Status
 
-🟢 Working scaffold
+🟢 Working scaffold## Evidence Mapping and Validation Layer
+
+The platform now includes a structured evidence-mapping layer that is kept separate from validated screening instruments and exploratory research hypotheses.
+
+Implemented components:
+
+- Structured `EvidenceMapping` representation
+- Verified evidence-record JSON structure
+- Required-field validation for evidence records
+- Source metadata validation
+- Status validation for evidence records
+- Explicit rejection of predictive fields such as:
+  - `risk_score`
+  - `predicted_probability`
+  - `individual_risk`
+  - `composite_score`
+
+The evidence layer records population-level evidence relationships only. It does not generate individual disease predictions, probabilities, or composite health-risk scores.
+
+Current automated test status:
+
+- 29 tests passing
+- Evidence mapping tests passing
+- Evidence record validation tests passing
+- FINDRISC tests passing
+- PHQ-9 safety tests passing
+- Anthropometric classification tests passing
+- Profile validation tests passing
