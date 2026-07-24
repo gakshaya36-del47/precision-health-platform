@@ -1,0 +1,17 @@
+{
+  "id": "physical_activity_incident_t2d_smith_2016",
+  "factor": "Physical activity",
+  "biological_domain": "Metabolic health",
+  "outcome": "Incident type 2 diabetes mellitus",
+  "evidence_type": "Systematic review and dose-response meta-analysis of prospective cohort studies",
+  "direction": "Higher physical activity was associated with lower incidence of type 2 diabetes mellitus",
+  "population_context": "Adults represented in prospective cohort studies included in the systematic review",
+  "evidence_strength": "Systematic-review level evidence; interpretation remains dependent on the included observational evidence and study populations",
+  "source": {
+    "citation": "Smith AD, Crippa A, Woodcock J, et al. Physical activity and incident type 2 diabetes mellitus: a systematic review and dose-response meta-analysis of prospective cohort studies. Diabetologia. 2016;59(12):2527-2545.",
+    "doi": "10.1007/s00125-016-4079-0",
+    "pmid": "27747395"
+  },
+  "interpretation": "Evidence-mapping record describing a population-level association. This record does not generate an individual risk prediction, disease probability, or composite health score.",
+  "status": "verified_evidence_record"
+}
