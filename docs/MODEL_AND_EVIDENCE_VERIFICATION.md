@@ -1,4 +1,17 @@
-# Model and Evidence Verification
+## FINDRISC Version Selection
+
+The project will implement the later 0–26 point FINDRISC version, not the original 0–20 point Diabetes Risk Score published by Lindström & Tuomilehto (2003).
+
+The selected version must have its complete scoring table verified from an authoritative source before implementation.
+
+The following must not be conflated:
+
+- Original 2003 Diabetes Risk Score: 0–20 points, seven variables.
+- Later 0–26 FINDRISC versions: expanded/modified scoring structure, including family history.
+
+Implementation status: NOT YET CLEARED.
+
+No FINDRISC code will be written until the exact adopted version and all scoring categories are documented and verified.# Model and Evidence Verification
 
 Status: planning/verification document. Supplements
 `docs/MODEL_AND_EVIDENCE_INVENTORY.md`. No application code has been written
@@ -231,4 +244,16 @@ verification entry being added to this document first.
 
 No code changes have been made as part of this document. Next step, when
 requested, is to translate only the "Approved for implementation" table above
-into `MODEL_ASSUMPTIONS.md` entries before any corresponding code is written.
+into `MODEL_ASSUMPTIONS.md` entries before any corresponding code is written.## FINDRISC Version Selection
+
+The project will implement the later 0–26 point FINDRISC version, not the original 0–20 point Diabetes Risk Score published by Lindström & Tuomilehto (2003).
+
+The selected version must have its complete scoring table verified from an authoritative source before implementation.
+
+The following must not be conflated:
+- Original 2003 Diabetes Risk Score: 0–20 points, seven variables.
+- Later 0–26 FINDRISC versions: expanded/modified scoring structure, including family history.
+
+Implementation status: NOT YET CLEARED.
+
+No FINDRISC code will be written until the exact adopted version and all scoring categories are documented and verified.
