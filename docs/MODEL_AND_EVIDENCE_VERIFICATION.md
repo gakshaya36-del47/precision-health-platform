@@ -264,4 +264,16 @@ The following must not be conflated:
 
 Implementation status: NOT YET CLEARED.
 
-No FINDRISC code will be written until the exact adopted version and all scoring categories are documented and verified.
+No FINDRISC code will be written until the exact adopted version and all scoring categories are documented and verified.## PHQ-9 Implementation Gate
+
+The PHQ-9 is approved as a validated screening instrument for depression-related well-being assessment.
+
+The implementation will use the standard nine-item PHQ-9 structure, with each item scored from 0 to 3 and a total score ranging from 0 to 27.
+
+The implementation must preserve the published item wording, response categories, and scoring structure. No coefficients will be reconstructed, recalibrated, or modified.
+
+Item 9 (thoughts that the respondent would be better off dead or of self-harm) requires an explicit safety-response pathway. A positive response must be represented separately from the total symptom score and must not be silently absorbed into an ordinary severity classification.
+
+The platform must not diagnose depression or infer imminent risk from the PHQ-9 score alone. The item-9 pathway is a safety-oriented response pathway, not a clinical risk prediction model.
+
+Implementation status: CLEARED FOR IMPLEMENTATION, contingent on explicit item-9 safety-response handling.
