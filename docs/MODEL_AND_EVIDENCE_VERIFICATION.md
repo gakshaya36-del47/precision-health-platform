@@ -23,7 +23,15 @@ Every proposed Version 1 instrument or framework below is labeled as one of:
 - **EVIDENCE MAPPING**
 - **EXPLORATORY RESEARCH HYPOTHESIS**
 
----
+---Verification update:
+
+The 0–26 point FINDRISC scoring structure has been cross-checked against the original Lindström & Tuomilehto (2003) Diabetes Risk Score citation and multiple direct reproductions of the original scoring table. The adopted implementation uses the eight-variable 0–26 structure: age, BMI, waist circumference, physical activity, daily fruit/vegetable/berry intake, antihypertensive medication, history of high blood glucose, and family history of diabetes.
+
+The original 2003 paper reports the underlying seven-variable Diabetes Risk Score with a 0–20 range. The 0–26 structure used by this project is the later expanded FINDRISC form that includes family history. These versions are explicitly treated as distinct and will not be conflated.
+
+Implementation status: CLEARED FOR IMPLEMENTATION.
+
+The implementation must preserve the published category boundaries and integer point values. No coefficients will be reconstructed, recalibrated, or modified. Original Finnish-cohort absolute-risk percentages must not be presented as individually calibrated predictions for platform users.
 
 ## A. FINDRISC — Verification Table
 
