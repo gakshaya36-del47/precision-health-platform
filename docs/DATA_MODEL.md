@@ -117,4 +117,75 @@ This separation is required by the Version 1 Evidence Freeze documented in:
 - FINDRISC scoring
 - PHQ-9 scoring and safety pathway
 - cardiovascular evidence mapping
-- cross-domain evidence mapping
+- cross-domain evidence mapping## Architectural Separation of Assessment and Evidence Domains
+
+The platform maintains a strict separation between different types of health-related information and outputs.
+
+### 1. Anthropometric Classification
+
+Anthropometric measurements such as BMI, waist circumference, and waist-to-height ratio are handled as classification or assessment outputs.
+
+These functions:
+
+- operate on measured or self-reported body measurements;
+- return the relevant classification or category;
+- do not independently diagnose disease;
+- do not produce a composite disease-risk score.
+
+---
+
+### 2. FINDRISC Validated Screening Instrument
+
+FINDRISC is implemented as a separate validated screening instrument.
+
+Its scoring structure and category boundaries are preserved from the adopted published version. The score is calculated independently from other platform modules.
+
+The FINDRISC output must not be combined with anthropometric classifications, PHQ-9 scores, or evidence-mapping associations to create an unsupported composite score.
+
+---
+
+### 3. PHQ-9 Validated Screening Instrument
+
+PHQ-9 is implemented as a separate validated symptom-screening instrument.
+
+The nine item scores are used to calculate the PHQ-9 total score and corresponding severity category according to the adopted scoring structure.
+
+Item 9 is represented separately through an explicit safety-response flag. The PHQ-9 score does not constitute a diagnosis or an independent prediction of imminent risk.
+
+---
+
+### 4. Evidence Mapping
+
+Evidence mapping represents documented relationships between factors, biological domains, genes, nutrients, behaviours, or disease-related outcomes.
+
+Evidence-mapping records:
+
+- retain their source citations;
+- describe the direction or nature of an association where supported;
+- do not automatically generate a numerical risk score;
+- are not aggregated into a composite health score.
+
+---
+
+### 5. Exploratory Research Hypotheses
+
+Exploratory hypotheses are clearly distinguished from validated instruments and established classifications.
+
+A research hypothesis may identify a potentially interesting relationship for future investigation, but it must not be presented as:
+
+- a validated clinical score;
+- a diagnostic conclusion;
+- an individually calibrated prediction;
+- or an established causal relationship without sufficient evidence.
+
+---
+
+## Non-Combination Rule
+
+Anthropometric classifications, FINDRISC scores, PHQ-9 scores, evidence-mapping associations, and exploratory research hypotheses must remain separate conceptual and computational domains.
+
+These modules must **not be combined into a single composite health-risk score or unsupported numerical prediction**.
+
+No cross-domain weighting, aggregation, or prioritisation score may be introduced unless it is separately supported by appropriate evidence, documented in the model verification record, and explicitly approved as a new model decision.
+
+The purpose of this separation is to prevent a validated screening instrument from being mathematically blended with classifications or research associations in a way that could create a number that appears clinically meaningful but has not been validated.
